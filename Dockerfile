@@ -29,6 +29,8 @@ RUN "apk" "add" "make" "libtool" "automake"
 RUN "apk" "add" "vim"
 RUN "apk" "add" "mc"
 
+# only for VSCode Broadcomb Cobol extenstion
+# RUN "apk" "add" "openjdk17-jdk"
 
 # build the GnuCobol 3.1
 # 1. working folder
