@@ -48,6 +48,6 @@ RUN "make" "install"
 
 # 4. ensure everything is working properly
 WORKDIR /source/repos/gnucobol-3.1/tests
-RUN "./testsuite"
+# RUN "./testsuite"
 
 CMD "/bin/sh"
