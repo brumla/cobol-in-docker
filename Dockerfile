@@ -31,7 +31,7 @@ WORKDIR /source/repos/gnucobol-3.1
 RUN "./configure"
 RUN "make"
 RUN "make" "install"
-RUN "ldconfig"
+#RUN "ldconfig"
 
 # 4. ensure everything is working properly
 WORKDIR /source/repos/gnucobol-3.1/tests
