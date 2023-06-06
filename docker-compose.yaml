@@ -1,0 +1,11 @@
+services:
+  cobol:
+    build: .
+    tty: true
+    volumes:
+      - cbl_home:/home/app/source/repos
+      - cbl_vscode:/home/app/.vscode/extensions
+
+volumes:
+  cbl_home:
+  cbl_vscode:
