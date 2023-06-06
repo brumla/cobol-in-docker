@@ -47,5 +47,13 @@ RUN "./configure"
 RUN "make"
 RUN "make" "install"
 
+WORKDIR /source/repos
+RUN "ls"
+RUN "rm" "-rf" "gnucobol*"
+
+RUN "adduser" "-D" "app"
+USER app
+WORKDIR /home/app
+RUN "mkdir" "-p" "source/repos"
 
 CMD "/bin/sh"
