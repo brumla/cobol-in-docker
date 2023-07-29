@@ -38,11 +38,11 @@ RUN "mkdir" "-p" "source/repos"
 WORKDIR /source/repos
 
 # 2. download the archive and unpack
-RUN "wget" "https://ftp.gnu.org/gnu/gnucobol/gnucobol-3.1.2.tar.gz"
-RUN "tar" "xzvf" "gnucobol-3.1.2.tar.gz"
+RUN "wget" "https://ftp.gnu.org/gnu/gnucobol/gnucobol-3.2.tar.gz"
+RUN "tar" "xzvf" "gnucobol-3.2.tar.gz"
 
 # 3. compile and install
-WORKDIR /source/repos/gnucobol-3.1.2
+WORKDIR /source/repos/gnucobol-3.2
 RUN "./configure"
 RUN "make"
 RUN "make" "install"
