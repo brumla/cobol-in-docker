@@ -47,13 +47,22 @@ RUN "./configure"
 RUN "make"
 RUN "make" "install"
 
+# 4. cleanup
 WORKDIR /source/repos
 RUN "ls"
 RUN "rm" "-rf" "gnucobol*"
 
+# 5. user environment
 RUN "adduser" "-D" "app"
 USER app
 WORKDIR /home/app
 RUN "mkdir" "-p" "source/repos"
+
+# 6. volumes
+# source code folder
+VOLUME [ "/home/app/source/repos" ]
+
+# VSCode extensions
+VOLUME [ "/home/app/.vscode/extensions" ]
 
 CMD "/bin/sh"
