@@ -30,7 +30,7 @@ RUN "apk" "add" "vim"
 RUN "apk" "add" "mc"
 
 # only for VSCode Broadcomb Cobol extenstion
-# RUN "apk" "add" "openjdk17-jdk"
+RUN "apk" "add" "openjdk17-jdk"
 
 # build the GnuCobol 3.1
 # 1. working folder
@@ -64,5 +64,6 @@ VOLUME [ "/home/app/source/repos" ]
 
 # VSCode extensions
 VOLUME [ "/home/app/.vscode/extensions" ]
+ENV "JAVA_HOME" "/usr/lib/jvm/java-17-openjdk"
 
 CMD "/bin/sh"
